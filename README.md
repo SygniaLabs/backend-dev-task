@@ -15,4 +15,6 @@ Please follow the instructions below, and don't hesitate to ask us for anything 
 
 4. Once you are done, download the notebook file (as .ipynb) and send it to: `roni.d@sygnia.co`
 
+5. If for some reason you are having hard time working with Binder, you can always download `the_big_bang.py` and work locally in your favorite IDE!
+
 ### Good luck!
