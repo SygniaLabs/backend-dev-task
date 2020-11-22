@@ -8,7 +8,7 @@ import "fmt"
        @param id: The ID for the given doc, or -1 for automatic ID.
 */
 func index(text string, id int) {
-	fmt.Printf("index(%s, %d)", text, id)
+	//fmt.Printf("index(%s, %d)", text, id)
 }
 
 /*
@@ -18,11 +18,10 @@ func index(text string, id int) {
        @return: The list of matching document IDs.
 */
 func match(text string) []int {
-	fmt.Printf("match(%s)", text)
+	//fmt.Printf("match(%s)", text)
 	return []int{}
 }
 
 func main() {
-	fmt.Println("Hello, World!")
-	index("hello, world", 1)
+	fmt.Println("This is the Big Bang exercise main. Go test...")
 }
