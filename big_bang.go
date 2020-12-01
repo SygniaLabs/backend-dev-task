@@ -7,7 +7,8 @@ package main
     Try to complete as much steps as you can but keep in mind the complexity and quality of your solution.
     Few tips before you go:
     We suggest you to read all tests and assert messages before you start implementing, it will save you some time in the advanced steps.
-	Feel free to install and impoort any external package that might help you, but make sure that the implementation of the of the DB should be yours (and not imported from the external package).
+	Feel free to install and impoort any external package that might help you, but make sure that the implementation of the of the DB should be yours 
+	(and not imported from the external package).
 *******************************************************************************************************************************************/
 
 /*
