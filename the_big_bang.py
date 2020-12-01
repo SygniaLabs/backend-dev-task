@@ -9,7 +9,8 @@
 # 
 # Few tips before you go -
 # * We suggest you to read all tests and assert messages before you start implementing, it will save you some time in the advanced steps.
-# * Feel free to install and import any external package that might help you!
+# * Feel free to install and import any external package that might help you, but make sure that the implementation of the of the DB should be yours 
+#   (and not imported from the external package).
 
 
 from typing import Dict, List
