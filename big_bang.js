@@ -19,6 +19,9 @@ function _generate_data() {
     });
 }
 
+/******************************************************************************************************************************************/
+/* Your code goes here */
+
 /*
     Stores the document and have it available to search.
         @param doc: A one level hierarchy dict.
@@ -39,8 +42,7 @@ match = (text) => {
     return undefined;
 };
 
-_generate_data();
-
+/******************************************************************************************************************************************/
 
 index({'Sheldon': 'Our whole universe was in a hot, dense state'}, 1)
 assert.deepEqual(match("universe"), [1]);
@@ -60,7 +62,7 @@ index({'Sheldon': 'It doesn\'t need proving'}, id_=1);
 assert(match(db, 'prove'),[1]) ; // Our search should support variations match, so in this case it should find all documents containing - proving, prove, proves, proved..'
 
 
-_generate_data(db);
+_generate_data();
 
 assert.equal((match('jedi').length) > 70,true);
 
