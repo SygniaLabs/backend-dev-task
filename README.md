@@ -19,8 +19,6 @@ If you prefer to develop locally:
 3. Follow the instructions in the file
 
 
-
-
 If **Python** is your favorite language, and you prefer working with Jupyter Notebook, you can also use **Binder**:
 1. Go to [https://mybinder.org/](https://mybinder.org/)
 
