@@ -27,9 +27,8 @@ If **Python** is your favorite language, and you prefer working with Jupyter Not
 3. Open `the_big_bang.ipynb` and follow the instructions there
 
 
-Once you are done:
-1. Download the notebook file as .ipynb, or take the relevant py/go/js file
-2. Zip the file
-3. Mail it to: `devtask@sygnia.co`
+
+Once you are done - use [this form](https://forms.monday.com/forms/bd1bd6a704555293efab499d8ebcf60d?r=use1) to submit your solution.
+
 
 ### Good luck!
