@@ -28,7 +28,7 @@ If **Python** is your favorite language, and you prefer working with Jupyter Not
 
 
 
-Once you are done - use [this form](https://forms.monday.com/forms/bd1bd6a704555293efab499d8ebcf60d?r=use1) to submit your solution.
+Once you are done - use [this form](https://forms.monday.com/forms/cd5860e7c7c7ce48ee9fb63696d1b32b?r=use1) to submit your solution.
 
 
 ### Good luck!
