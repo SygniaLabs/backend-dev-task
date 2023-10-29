@@ -18,36 +18,34 @@ from typing import Dict, List
 
 
 def _generate_data(db):
-    for i, row in enumerate(open('./transcript.txt', 'r').readlines()):
+    for i, row in enumerate(open("./transcript.txt", 'r').readlines()):
         if row.strip():
-            index(db, {f'line {i}': row.strip()}, id_=i)
+            index(db, row.strip(), id_=i)
 
 
 ### Your Code ###
 
-
-def index(db, doc: Dict[str, str], id_: int = None):
+def index(db, text: str, id_: int = None):
     """
     Stores the document and have it available to search.
 
     :param db: The data structure to use.
-    :param doc: A one level hierarchy dict.
-    :param id: The ID for the given doc, or None for automatic ID.
+    :param text: The text to index to the DB.
+    :param id_: The ID for the given doc, or None for automatic ID.
     """
-    raise NotImplemented('Implement Me!')
-
+    raise NotImplemented("Implement Me!")
 
 
 def match(db, text: str) -> List[int]:
     """
     Returns the IDs of documents that contained ANY of the words in this text.
-    This operation is case insensitive.
+    This operation is case-insensitive.
 
     :param db: The data structure to use.
     :param text: text that we want to search for.
     :return: The list of matching document IDs.
     """
-    raise NotImplemented('Implement Me!')
+    raise NotImplemented("Implement Me!")
 
 
 # Change this line to point to your DB object.
@@ -58,43 +56,43 @@ db = None
 
 # Step 1:
 
-index(db, {'Sheldon': 'Our whole universe was in a hot, dense state'}, id_=1)
+index(db, "Our whole universe was in a hot, dense state", id_=1)
 
-assert match(db, 'universe') == [1], 'The word "universe" should appear in the DB'
+assert match(db, "universe") == [1], "The word 'universe' should appear in the DB"
 
 # Step 2:
 
-index(db, {'Lenoard': 'Then nearly fourteen billion expansion ago expansion started, wait!'}, id_=1)
+index(db, "Then nearly fourteen billion expansion ago expansion started, wait!", id_=1)
 
-assert match(db, 'It all started with the big bang!') == [1], 'The word "started" should appear in the DB'
-assert match(db, 'AGO') == [1], 'The word "ago" should appear in the DB'
+assert match(db, "It all started with the big bang!") == [1], "The word 'started' should appear in the DB"
+assert match(db, "AGO") == [1], "The word 'ago' should appear in the DB"
 
 # Step 3:
 
-index(db, {'Penny': "Our best and brightest figure that it'll make an even bigger bang!"}, id_=1)
-index(db, {'Penny': 'Music and mythology, Einstein and astrology', 'Raj': 'It all started with the big bang!'}, id_=2)
+index(db, "Our best and brightest figure that it'll make an even bigger bang!", id_=1)
+index(db, "Music and mythology, Einstein and astrology. It all started with the big bang!", id_=2)
 
-assert match(db, 'BANG') == [1,2], 'The word "bang" should appear in the DB multiple times'
+assert match(db, "BANG") == [1, 2], 'The word "bang" should appear in the DB multiple times'
 
 # Step 4:
 
-index(db, {'Howard': "It's expanding ever outward but one day"}, id_=1)
-assert match(db, 'expanding') == [1], 'Document with id = 1 contains the word "expanding"'
+index(db, "It's expanding ever outward but one day", id_=1)
+assert match(db, "expanding") == [1], 'Document with id = 1 contains the word "expanding"'
 
-index(db, {'Bernadette': "Our best and brightest figure that it'll make an even bigger bang!"}, id_=1)
-assert match(db, 'expanding') == [], 'Document with id = 1 was overriden by a new doc that does not contain the word expanding'
-assert match(db, 'brightest') == [1], 'Document with id = 1 contains the word "brightest"'
+index(db, "Our best and brightest figure that it'll make an even bigger bang!", id_=1)
+assert match(db, "expanding") == [], "Document with id = 1 was overridden by a new doc that does not contain the word expanding"
+assert match(db, "brightest") == [1], "Document with id = 1 contains the word 'brightest'"
 
 # Step 5:
 
-index(db, {'Sheldon': 'It doesn\'t need proving'}, id_=1)
+index(db, "It doesn't need proving", id_=1)
 
-assert match(db, 'prove') == [1], 'Our search should support variations match, so in this case it should find all documents containing - proving, prove, proves, proved..'
+assert match(db, "prove") == [1], "Our search should support variations match, so in this case it should find all documents containing - proving, prove, proves, proved.."
 
 # Step 6:
 
 _generate_data(db)
-assert len(match(db, 'jedi')) >= 70, 'expected more appearances of the word "jedi"'
+assert len(match(db, 'jedi')) >= 70, "expected more appearances of the word 'jedi'"
 
 
 ### Performance Tests ###
@@ -117,10 +115,9 @@ class Timer:
 
 
 
-_generate_data(db)
 t = Timer()
 with t:
-    match(db, 'jedi')
+    match(db, "jedi")
 
-assert t.duration < 0.0001, 'Too slow :('
+assert t.duration < 0.0001, "Too slow :("
 
