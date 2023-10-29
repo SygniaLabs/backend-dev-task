@@ -4,7 +4,7 @@
 # In this exercise you will implement a text search engine.
 # * You can use one  store object with any data structure that suits your idea.
 # * The tests are divided into steps, please pass each step at a time, but keep previous steps working.
-# * Try to complete as much steps as you can but keep in mind the complexity and quality of your solution.
+# * Try to complete as many steps as you can but keep in mind the complexity and quality of your solution.
 #
 #
 # Few tips before you go -
