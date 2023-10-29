@@ -13,7 +13,7 @@
 #   (and not imported from the external package).
 
 
-from typing import Dict, List
+from typing import List
 
 
 
