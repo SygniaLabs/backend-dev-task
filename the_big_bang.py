@@ -25,13 +25,17 @@ def _generate_data(db):
 
 ### Your Code ###
 
-def index(db, text: str, id_: int = None):
+# Change this line to point to your DB object.
+db = None
+
+
+def index(db, text: str, id_: int):
     """
     Stores the document and have it available to search.
 
     :param db: The data structure to use.
     :param text: The text to index to the DB.
-    :param id_: The ID for the given doc, or None for automatic ID.
+    :param id_: The ID for the given doc.
     """
     raise NotImplemented("Implement Me!")
 
@@ -46,10 +50,6 @@ def match(db, text: str) -> List[int]:
     :return: The list of matching document IDs.
     """
     raise NotImplemented("Implement Me!")
-
-
-# Change this line to point to your DB object.
-db = None
 
 
 ### Sanity Tests ###
